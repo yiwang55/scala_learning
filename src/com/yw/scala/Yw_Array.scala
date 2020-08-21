@@ -8,7 +8,8 @@ object Yw_Array {
 
     val arr = ArrayBuffer[Int](1,2,3)
     arr.+=(4) //尾部添加，相当于数组push方法
-    arr.+=:(5) //头部添加，相当于数组unshift方法
+    arr.+=:(100) //头部添加，相当于数组unshift方法
+    arr.append(5,6)
     arr.foreach(println)
 
 
