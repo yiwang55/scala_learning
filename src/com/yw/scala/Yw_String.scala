@@ -5,6 +5,8 @@ object Yw_String {
     val s = "yiwang"
     val s1 = "YIWANG"
 
-
+    println(s.indexOf(98))
+//    println(s.equals(s1))
+//    println(s.equalsIgnoreCase(s1))
   }
 }
