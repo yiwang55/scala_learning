@@ -1,5 +1,7 @@
 package com.yw.scala
 
+import scala.collection.mutable
+
 object Yw_Map {
   def main(args: Array[String]): Unit = {
     import scala.collection.mutable.Map
@@ -7,8 +9,13 @@ object Yw_Map {
     map.put("a",100)
     map.put("b",200)
     map.put("c",250)
-    map.foreach(println)
-    map.filter()
+//    map.foreach(println)
+    val result: mutable.Map[String, Int] = map.filter(tp => {
+      val key = tp._1
+      val value = tp._2
+      value == 200
+    })
+    result.foreach(println)
 
     //    val map1: Map[String, Int] = Map[String,Int]("a"->1,"b"->2,("c",3),("c",4))
     //    val map2: Map[String, Int] = Map[String,Int]("a"->100,"b"->2,("c",300),("e",500))
